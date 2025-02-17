@@ -7,7 +7,7 @@ if (-not (Test-Path -Path $installDir)) {
 # Install Sunshine Streaming Server
 
 # Define Sunshine installer URL and path
-$sunshineInstallerUrl = "https://github.com/LizardByte/Sunshine/releases/download/v2025.213.180858/Sunshine-0.23.1-Installer.exe"
+$sunshineInstallerUrl = "https://github.com/LizardByte/Sunshine/releases/download/v2025.122.141614/sunshine-windows-installer.exe"
 $sunshineInstallerPath = "$installDir\SunshineInstaller.exe"
 
 # Download Sunshine installer
