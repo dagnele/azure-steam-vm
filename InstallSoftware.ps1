@@ -50,7 +50,8 @@ function Install-Software {
         Remove-Item -Path $installerPath -Force
         Write-Host "$installerName installed successfully."
     } catch {
-        Write-Host "Error installing $installerName: $_" -ForegroundColor Red
+        Write-Host "Error installing $installerName: $($_.Exception.Message)" -ForegroundColor Red
+        exit 1
     }
 }
 
