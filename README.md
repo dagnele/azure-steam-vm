@@ -25,10 +25,10 @@ az account set --subscription "<SUBSCRIPTION_ID>"
 
 ### Step 2: Create a Resource Group
 
-Choose a location (e.g., `eastus`):
+Choose a location (e.g., `northeurope`):
 
 ```sh
-az group create --name myGamingVM-rg --location eastus
+az group create --name SteamRG --location northeurope
 ```
 
 ### Step 3: Deploy the ARM Template
@@ -53,8 +53,8 @@ Once deployment is complete, get the VM's public IP address:
 
 ```sh
 az network public-ip show \
-    --resource-group myGamingVM-rg \
-    --name myGamingVM-ip \
+    --resource-group SteamRG \
+    --name SteamVM-ip \
     --query "ipAddress" --output tsv
 ```
 
@@ -87,7 +87,7 @@ Ensure your firewall allows these ports.
 To remove all resources:
 
 ```sh
-az group delete --name myGamingVM-rg --yes --no-wait
+az group delete --name SteamRG --yes --no-wait
 ```
 
 ## Troubleshooting
