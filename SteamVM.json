@@ -169,10 +169,12 @@
                 "typeHandlerVersion": "1.10",
                 "autoUpgradeMinorVersion": true,
                 "settings": {
-                    "script": "[parameters('installScriptUri')]"
+                    "fileUris": [
+                        "[parameters('installScriptUri')]"
+                    ]
                 },
                 "protectedSettings": {
-                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File \"[parameters('installScriptUri')]\""
+                    "commandToExecute": "powershell -ExecutionPolicy Unrestricted -File InstallSoftware.ps1"
                 }
             }
         }
