@@ -38,8 +38,8 @@ Run the following command, replacing placeholders with your own values:
 ```sh
 az deployment group create \
     --resource-group myGamingVM-rg \
-    --template-file azuredeploy.json \
-    --parameters vmName=myGamingVM vmSize=Standard_D2s_v3 adminUsername=yourUser installScriptUri=https://example.com/install-script.ps1
+    --template-file GamingARM.json \
+    --parameters vmName=myGamingVM vmSize=Standard_D2s_v3 adminUsername=yourUser installScriptUri=https://example.com/InstallSoftware.ps1
 ```
 
 You'll be prompted to enter the administrator password securely.
@@ -75,7 +75,7 @@ Ensure your firewall allows these ports.
 
 ## Additional Setup
 
-- Install Steam and Sunshine manually if not included in the installation script.
+- Install Steam and Sunshine manually if not included in `InstallSoftware.ps1`.
 - Configure Sunshine for remote streaming.
 - Optimize Windows for gaming.
 
