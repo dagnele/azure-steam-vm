@@ -41,8 +41,9 @@ function Install-Software {
         Write-Host "Installing $installerName..."
         $process = Start-Process -FilePath $installerPath -ArgumentList $arguments -Wait -PassThru -NoNewWindow -ErrorAction Stop
 
-        # Check if the process exited with a non-zero exit code
-        if ($process.ExitCode -ne 0) {
+        # Check the process exit code
+        # Some installers (e.g. Steam) may return an exit code of 1 on success.
+        if ($process.ExitCode -ne 0 -and $process.ExitCode -ne 1) {
             throw "$installerName installation failed with exit code $($process.ExitCode)."
         }
 
