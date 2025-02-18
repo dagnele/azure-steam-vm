@@ -1,4 +1,4 @@
-# Azure Gaming VM Deployment
+# Azure Gaming VM
 
 This repository contains an Azure Resource Manager (ARM) template for deploying a Windows 11 virtual machine optimized for game streaming using Steam and Sunshine.
 
