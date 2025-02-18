@@ -37,9 +37,9 @@ Run the following command, replacing placeholders with your own values:
 
 ```sh
 az deployment group create \
-    --resource-group myGamingVM-rg \
-    --template-file GamingARM.json \
-    --parameters vmName=myGamingVM vmSize=Standard_D2s_v3 adminUsername=yourUser installScriptUri=https://example.com/InstallSoftware.ps1
+   --resource-group SteamRG
+   --template-file SteamVM.json
+   --parameters vmName="SteamVM" adminUsername="yourUser" adminPassword="YourPassword" installScriptUri="https://raw.githubusercontent.com/dagnele/azure-steam-vm/refs/heads/main/InstallSoftware.ps1"
 ```
 
 You'll be prompted to enter the administrator password securely.
