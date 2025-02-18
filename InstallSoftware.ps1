@@ -51,7 +51,7 @@ function Install-Software {
         Remove-Item -Path $installerPath -Force
         Write-Host "$installerName installed successfully."
     } catch {
-        Write-Host "Error installing $installerName: $($_.Exception.Message)" -ForegroundColor Red
+        Write-Host "Error installing `${installerName}`: $($_.Exception.Message)" -ForegroundColor Red
         exit 1
     }
 }
@@ -63,5 +63,3 @@ Install-Software -installerUrl $sunshineInstallerUrl -installerName "SunshineIns
 # Install Steam
 $steamInstallerUrl = "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe"
 Install-Software -installerUrl $steamInstallerUrl -installerName "SteamSetup.exe" -arguments "/S"
-
-# Optional: Configure Sunshine or Steam further if needed
