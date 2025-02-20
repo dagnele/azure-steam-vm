@@ -124,11 +124,6 @@
             "location": "[parameters('location')]",
             "name": "[parameters('vmName')]",
             "properties": {
-                "priority": "Spot",
-                "evictionPolicy": "Deallocate",
-                "billingProfile": {
-                    "maxPrice": -1
-                },
                 "hardwareProfile": {
                     "vmSize": "[parameters('vmSize')]"
                 },
